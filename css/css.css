@@ -1,0 +1,202 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*CSS RESET*/
+
+
+
+/*-------------------------------------------------------------------------------------*/
+
+body {width: 100%; height: 100%; overflow: hidden; font-family: 'Open Sans', sans-serif;}
+body::-webkit-scrollbar {display:none;}
+
+header {position: fixed; width: 100%; height: 100%; z-index: 9990; background-color: rgba(69, 69, 69, 0.9);}
+header h1 {width: 300px; height: 90px; background-image: url(../images/logo_Yellow.png); background-size: contain; background-repeat: no-repeat; background-position: center; margin-top: 4%; margin-left: auto; margin-right: auto;
+  font-size: 0; color: transparent; text-indent: -9999;}
+header a.close {position: absolute; width: 40px; height: 40px; cursor: pointer; top: 2%; right: 2%; background-image: url(../images/close.png); background-repeat: no-repeat; background-position: center; font-size: 0;}
+header nav {}
+header nav ul {position: absolute; overflow: auto; width: 100%; height: 80%;}
+header nav ul::-webkit-scrollbar {display:none;}
+header nav ul li {text-align: center; margin-top: 6%; margin-bottom: 9%;}
+header nav ul li a {color: white; text-decoration: none; font-size: 40px;}
+header nav ul li a:hover {color: #ddd;}
+
+section {width: 100%; height: 100%; position: absolute;}
+
+section article.intro {position: fixed; width: 100%; height: 100%; z-index: 9999; background-color: #454545;}
+section article.intro div.logo {background-image: url(../images/logo_Yellow.png); width: 620px; height: 160px; background-repeat: no-repeat; background-position: center; background-size: contain; font-size: 0; text-indent: -9999; color: transparent; position: absolute;}
+section article.intro a.skip {background-image: url(../images/introBtn.png); width: 32px; height: 50px; display: block; background-repeat: no-repeat; background-position: center; font-size: 0; color: transparent; text-indent: -9999; position: absolute; bottom: 0; margin-bottom: 40px;}
+
+section article.head {position: fixed; width: 100%; height: 50px; background-color: #454545; overflow: hidden; z-index: 9990;}
+section article.head h2 {width: 150px; height: 34px; margin-top: 8px; margin-left: 2%;  background-image: url(../images/logo_Yellow.png); background-repeat: no-repeat; background-position: center; background-size: contain; font-size: 0; text-indent: -9999; color: transparent; float: left;}
+section article.head nav {display: inline-block; position: absolute; margin-top: 4px;}
+section article.head nav ul {display: inline-block;}
+section article.head nav ul li {float: left;}
+section article.head nav ul li a {display: block; padding: 10px 20px; cursor: pointer; font-size: 20px; color: #ffffff;}
+section article.head nav ul li a.active {background-color: #555; color: #eee; font-weight: 700;}
+section article.head nav ul li a:hover{color: #aaa;}
+section article.head a.show {position: absolute; right: 0; margin-right: 2%; width: 40px; height: 40px; margin-top: 5px; font-size: 0; cursor: pointer; background-image: url(../images/menu.png); background-repeat: no-repeat; background-position: center;}
+
+section article.wrapper {width: 100%; height: 100%;}
+
+section article.wrapper div.profile {width: 100%; height: 100%;}
+section article.wrapper div.profile div {position: relative; display: inline-block; font-size: 30px; line-height: 45px; font-weight: 700; letter-spacing: 1px;}
+
+section article.wrapper div.works {width: 100%; height: 100%; background: #f2f2f2;}
+section article.wrapper div.works div.txtWrap {width: 50%; height: 100%; position: absolute;}
+section article.wrapper div.works div.txt{width: 100%; height: 100%;background: #fff; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); overflow: auto; position: absolute; z-index: 9960;}
+section article.wrapper div.works div.txt::-webkit-scrollbar {display:none;}
+section article.wrapper div.works div.txtWrap a.txtHide {display: block; width: 40px; height: 40px; right: 0; margin-top: 70px; margin-right: 20px; cursor: pointer; z-index: 9970; position: absolute; background-image: url(../images/arrow.png); background-repeat: no-repeat; background-position: center; font-size: 0;}
+section article.wrapper div.works div.txt div.worksTxt {width: 100%; height: 100%; position: absolute; z-index: 9000;}
+section article.wrapper div.works div.txt div.worksTxt h2 {font-size: 20px; font-weight: 700; margin-left: 10%; margin-bottom: 10%; padding-top: 50%;}
+section article.wrapper div.works div.txt div.worksTxt p {width: 80%; font-size: 13px; line-height: 15px;margin: auto auto 20% auto;}
+
+.work1txt {display: block;}
+.work2txt {display: none;}
+.work3txt {display: none;}
+.work4txt {display: none;}
+.work5txt {display: none;}
+
+
+section article.wrapper div.works div.picWrap {width: 500%; height: 93%; margin-top: 3%; position: absolute; overflow: hidden;}
+
+div.picWrap div.work1 {width: 20%; height: 100%; float: left;}
+div.picWrap div.work1 div.pic {width: 80%; height: 100%; margin-left: 10%; margin-right: 10%;}
+div.picWrap div.work1 div.pic img {width: 44%; display: block; float: left; margin: 0 3%;}
+
+div.picWrap div.work2 {width: 20%; height: 100%; float: left;}
+div.picWrap div.work2 div.pic {width: 80%; height: 100%; margin-left: 10%; margin-right: 10%;}
+div.picWrap div.work2 div.pic img {height: 100%; display: block; float: left; margin: 0 5%;}
+
+div.picWrap div.work3 {width: 20%; height: 100%; float: left;}
+div.picWrap div.work3 div.pic {width: 80%; height: 100%; margin-left: 10%; margin-right: 10%; overflow: hidden;}
+div.picWrap div.work3 div.pic div.imgWrap {width: 200%; height: 98%; overflow: hidden;}
+div.picWrap div.work3 div.pic div.imgWrap div.images {width: 100%; overflow: hidden;}
+div.picWrap div.work3 div.pic div.imgWrap div.images img {width: 36%; float: left; margin: 0 7%;}
+div.picWrap div.work3 a.prev {display: block; width: 40px; height: 40px; position: absolute; margin-left: 3%; cursor: pointer;}
+div.picWrap div.work3 a.next {display: block; width: 40px; height: 40px; position: absolute; margin-left: 16.5%; cursor: pointer;}
+
+div.picWrap div.work4 {width: 20%; height: 100%; float: left;}
+div.picWrap div.work4 div.pic {width: 80%; height: 100%; margin-left:10%; margin-right: 10%; overflow: hidden;}
+div.picWrap div.work4 div.pic div.imgWrap {width: 200%; height: 98%; overflow: hidden;}
+div.picWrap div.work4 div.pic div.imgWrap div.images1 {width: 50%; height: 100%; overflow: hidden; float: left;}
+div.picWrap div.work4 div.pic div.imgWrap div.images1 img:first-child {width: 38%; float: left; margin: 0 0 0 12%;}
+div.picWrap div.work4 div.pic div.imgWrap div.images1 img:last-child {width: 38%; float: left; margin: 0 12% 0 0;}
+div.picWrap div.work4 div.pic div.imgWrap div.images2 {width: 50%; height: 100%; overflow: hidden;}
+div.picWrap div.work4 div.pic div.imgWrap div.images2 img:first-child {width: 38%; float: left; margin: 0 0 0 12%;}
+div.picWrap div.work4 div.pic div.imgWrap div.images2 img:last-child {width: 38%; float: left; margin: 0 12% 0 0;}
+div.picWrap div.work4 a.prev {display: block; width: 40px; height: 40px; position: absolute; margin-left: 3%; cursor: pointer;}
+div.picWrap div.work4 a.next {display: block; width: 40px; height: 40px; position: absolute; margin-left: 16.5%; cursor: pointer;}
+
+
+div.picWrap div.work5 {width: 20%; height: 100%; float: left;}
+div.picWrap div.work5 div.pic {width: 80%; height: 100%; margin-left:10%; margin-right: 10%; overflow: hidden;}
+div.picWrap div.work5 div.pic div.imgWrap {width: 200%; height: 98%; overflow: hidden;}
+div.picWrap div.work5 div.pic div.imgWrap div.images {width: 100%; overflow: hidden;}
+div.picWrap div.work5 div.pic div.imgWrap div.images img:first-child {width: 40%; height: 100%; float: left; margin: 0 5%;}
+div.picWrap div.work5 div.pic div.imgWrap div.images img:last-child {width: 18%; float: left; margin: 0 16%;}
+div.picWrap div.work5 a.prev {display: block; width: 40px; height: 40px; position: absolute; margin-left: 3%; cursor: pointer;}
+div.picWrap div.work5 a.next {display: block; width: 40px; height: 40px; position: absolute; margin-left: 16.5%; cursor: pointer;}
+
+
+section article.wrapper div.contact {width: 100%; height: 100%;}
+section article.wrapper div.contact div {position: relative; display: inline-block;}
+section article.wrapper div.contact div h2 {font-size: 40px; font-weight: 800;}
+section article.wrapper div.contact div p:nth-child(2) {font-size: 25px; font-weight: 700; margin-top: 10px;}
+section article.wrapper div.contact div p:nth-child(3) {font-size: 16px; font-weight: 400; margin-top: 5px;}
+section article.wrapper div.contact div p:nth-child(4) {font-size: 16px; font-weight: 400; margin-top: 5px;}
+
+
+
+
+
+
+@media screen and (max-width: 767px){
+    
+}
+/*MOBILE*/
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    
+}
+/*TABLET VERTICAL*/
+
+
+@media screen and (min-width: 1024px) and (max-width: 1280px){
+    
+}
+/*TABLET HORIZONTAL*/
+
+
+@media screen and (min-width: 1281px){
+    
+}
+/*LAPTOP*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
