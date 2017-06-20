@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height">
+    <title>WELL DONE CHILD</title>
+    <link rel="stylesheet" href="./css/css2.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,800" rel="stylesheet">
+    <script type="text/javascript" src="./script/script.js"></script>
+    <script src="script/jquery-1.12.4.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        boxReposition('.intro > .logo');
+        boxReposition2('.intro > .skip');
+        boxReposition3('.worksHeader > nav');    
+        boxReposition4();
+        boxReposition5();
+        
+        
+        $('body').css('overflow', 'hidden');
+        
+        $('.intro').click(function(){
+          $('.intro').stop().slideUp('slow');
+          $('body').css('overflow', 'hidden');
+        })
+        
+        $('.intro').on('mousewheel DOMMouseScroll', function(){
+          $('.intro').stop().slideUp('slow');
+          $('body').css('overflow', 'hidden');
+        })
+        
+        $('.close').click(function(){
+          $('header').stop().animate({'margin-top':'-100%'},1000,'swing');
+          $('.header').stop().slideDown('fast');
+          boxReposition5();
+          $('body').css('overflow', 'hidden');
+        })
+        
+        $('.header').click(function(){
+          $('.header').stop().slideUp('slow');
+          $('header').stop().animate({'margin-top':'0'},1000,'swing');
+          $('body').css('overflow', 'hidden');
+        })
+        
+        
+        
+        var menu = $('.menu');
+        
+        menu.click(function(event){
+          $('header').stop().animate({'margin-top':'-100%'},1000,'swing');
+          $('.header').stop().slideDown('fast');
+          boxReposition5();
+          $('body').css('overflow', 'hidden');
+          event.preventDefault();
+        $('html,body').stop().animate({scrollTop:$(this.hash).offset().top}, 1000);
+          
+        })
+        
+      })
+      
+      $(window).resize(function(){
+        boxReposition('.intro > .logo');
+        boxReposition2('.intro > .skip');
+        boxReposition3('.worksHeader > nav');    
+        boxReposition4();
+        boxReposition5();
+      })
+      
+      $(window).load(function(){
+        boxReposition('.intro > .logo');
+        boxReposition2('.intro > .skip');
+        boxReposition3('.worksHeader > nav');    
+        boxReposition4();
+        boxReposition5();
+      })
+      
+      function boxReposition(box){
+        var windowWidth = $(window).width();
+        var boxWidth = $(box).width();
+        var windowHeight = $(window).height();
+        var boxHeight = $(box).height();
+        
+        $(box).css('top', (windowHeight - boxHeight)/2);
+        $(box).css('left', (windowWidth - boxWidth)/2);
+      }
+      function boxReposition2(box){
+        var windowWidth = $(window).width();
+        var boxWidth = $(box).width();
+        
+        $(box).css('left', (windowWidth - boxWidth)/2);
+        $(box).css('bottom', '40px');
+      }
+      function boxReposition3(box){
+        var windowWidth = $(window).width();
+        var boxWidth = $(box).width();
+        
+        $(box).css('left', (windowWidth - boxWidth)/2);
+      }
+      function boxReposition4(){
+        var profileWidth = $('.profile').width();
+        var divWidth = $('.profile > div').width();
+        var profileHeight = $('.profile').height();
+        var divHeight = $('.profile > div').height();
+        
+        $('.profile > div').css('left', (profileWidth - divWidth)/2);
+        $('.profile > div').css('top', (profileHeight - divHeight)/2);
+      }
+      function boxReposition5(){
+        var headerWidth = $('.header').width();
+        var logoWidth = $('.header > h2').width();
+        
+        $('.header > h2').css('left', (headerWidth - logoWidth)/2);
+      }
+    </script>
+  </head>
+  <body -ms-overflow-style: none;>
+    <header>
+      <h1>Well Done Child</h1>
+      <a class="close">close</a>
+      <nav>
+        <ul -ms-overflow-style: none;>
+          <li><a href="#profile" class="menu">PROFILE</a></li>
+          <li><a href="#works" class="menu">WORKS</a></li>
+          <li><a href="#contact" class="menu">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <article class="intro">
+        <div class="logo"></div>
+        <a class="skip">skip</a>
+      </article>
+      <article class="header">
+        <h2>logo</h2>
+        <nav>
+          <ul>
+            <li><a class="work1 active">Beauty, Me</a></li>
+            <li><a class="work2">ㅇㅠㅍㅣ</a></li>
+            <li><a class="work3">CASE By case</a></li>
+            <li><a class="work4">Beauty, Me</a></li>
+            <li><a class="work5">Like knows like</a></li>
+          </ul>
+        </nav>
+      </article>
+      <article id="profile" class="profile">
+        <div>
+          YOON SAN<br />
+          1997.06.22<br />
+          KAYWON UNIVERSITY OF ART &amp; DESIGN<br />
+          photographic art<br />
+          179cm 72kg<br />
+        </div>
+      </article>
+      <article id="works" class="works">
+        <div class="pic_sub">
+          <a class="close">close</a>
+          <h2>Beauty, Me</h2>
+          <p>사진과를 둘러싼 미(美)에 관한 논쟁이 생겼었다.<br/>
+          ‘사진과 여자들이 이쁘더라.. 아니더라.. 이쁘다고 하는 것 자체가 얼굴을 평가하는 거다..<br/>
+            그런 취지로 말한게 아니다…’<br/>
+          '예쁘다'라는 단어를 얼굴만 보고 쓰는 단어가 아님을 누구나 알 수 있다고 생각했다.<br/>
+          물론 나도 알고는 있었다. 하지만 위 같은 생각이 잘못된 걸 알지만,<br/> 
+          나조차도 다른 류의 아름다움은 잘 생각해 보지 않았었다.  <br/>
+          어렴풋이 그 존재에 대해만 알고있었다.<br/>
+            그렇다면 아름다움, 예쁨, 내가 
+          생각하는 미(美)란 무엇일까 생각해 보고 싶었다.<br/>
+            <br/>
+          어떻게 봐도 아름다운데, 그냥 봐도 아름다운데 <br/>
+          사람은 아름다운데, 왜 모르지 싶다.
+          </p>
+        </div>
+        <div class="pic">
+          <div class="pic_1"></div>
+        </div>
+      </article>
+      <article id="contact" class="contact">
+        <div>
+          Tel. 000-0000-0000
+          e-mail. ejpa@jkadlf.com
+        </div>
+      </article>
+    </section>
+    <footer></footer>
+  </body>
+</html>
